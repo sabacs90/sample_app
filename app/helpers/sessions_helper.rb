@@ -1,6 +1,5 @@
 module SessionsHelper
   def sign_in(user)
-    print "\n\n\n\n>>>>>>>>>>>>>>>>>>>>>dsadasdsa<<<<<<\n\n\n"
     print user.remember_token
     cookies.permanent[:remember_token] = user.remember_token
     self.current_user = user
@@ -8,7 +7,6 @@ module SessionsHelper
 
   def sign_out
     self.current_user = nil
-    print "\n >>>>>>>>>>>>>DUPKA<<<<<<<<<<"
     cookies.delete(:remember_token)
   end
 
